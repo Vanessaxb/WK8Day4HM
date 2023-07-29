@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+// import Styles from '../components/Styles.module.css'
 import './App.css';
+import StarshipList from './components/StarshipList'
+// import StarshipListItem from "./StarshipListItem";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* {starshipElements} */}
+     <h1>STAR WARS STARSHIPS</h1>
+     <StarshipList />
+     {/* <StarshipListItem /> */}
+     
     </div>
   );
 }
+
+
 
 export default App;
