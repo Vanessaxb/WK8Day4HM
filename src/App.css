@@ -8,20 +8,22 @@
 }
 
 .starships {
-  width: 180px;
+  width: 195px;
   height: 90px;
   background-color: rgb(23, 66, 23);
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 10px;;
 }
 
 .cards { 
   display: grid;
   grid-template-columns: repeat(4, 180px); /* 4 columns with equal width */
   grid-template-rows: repeat(2, 100px);
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
 
 }

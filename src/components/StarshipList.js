@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import StarshipListItem from "./StarshipListItem";
 
 function StarshipList() {
-  const [starships, setStarships] = useState(null);
+  const [starships, setStarships] = useState([]);
   // Without the array of dependencies the use will run every time the mounts or re-render.
 
   // With an empty array it will run only when the component mounts the first time.
@@ -26,21 +26,27 @@ function StarshipList() {
   }, []);
 
   console.log("STARSHIPS", starships);
+  const starshipElements = starships ? (
+    starships.map((ships) => 
+      <div key={ships.name} className="starships" >
+        <h3>Name: {ships.name}</h3>
+        <h4>Model: {ships.model} </h4>
 
-  const starshipElements = starships ? (starships.map((starships) => (<h3 key={starships.name} className="starships">{" "} {starships.name}</h3>)) 
+      </div>
+      ) 
+      // const starshipElements = starships ? (starships.map((starships) => (<h3 key={starships.name} className="starships"> {starships.name}</h3>)) 
   ) : (
-  <h3>Loading...</h3>
+      <h3>Loading...</h3>
   );
   
   return (
     <div>
-      {/* <h2>UsersList</h2> */}
+     
       <div className="cards">{starshipElements}</div>
-      {/* <StarshipListItem /> */}
-
+     
       {/* <>
         {starships ? (
-          starships.map((starships) => <StarshipListItem  starships={starships} key={starships.id}/>)
+          starships.map((starships) => <StarshipListItem  starships={starships} key={starships.model}/>)
         ) : (
           <h3>Loading!!!!</h3>
         )}
