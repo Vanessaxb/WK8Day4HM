@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import StarshipListItem from "./StarshipListItem";
+import StarshipListItem from "./StarshipListItem"
 
 function StarshipList() {
   const [starships, setStarships] = useState([]);
@@ -26,11 +26,13 @@ function StarshipList() {
   }, []);
 
   console.log("STARSHIPS", starships);
+
   const starshipElements = starships ? (
     starships.map((ships) => 
       <div key={ships.name} className="starships" >
         <h3>Name: {ships.name}</h3>
         <h4>Model: {ships.model} </h4>
+        <h4>Crew: {ships.crew} </h4>
 
       </div>
       ) 

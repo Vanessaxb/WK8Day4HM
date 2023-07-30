@@ -1,10 +1,10 @@
 function StarshipListItem(props) {
-    const starship = props.starship;
+    const starships = props.starships;
     return (
         <div>
-            <h3>Name: {starship.name}</h3>
-            <h4>Cell: {starship.model}</h4>
-            <h4>Email: {starship.crew}</h4>
+            <h3>Name: {starships.name}</h3>
+            <h4>Model: {starships.model}</h4>
+            <h4>Crew: {starships.crew}</h4>
         </div>
     )
 }

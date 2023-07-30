@@ -6,7 +6,7 @@ import StarshipList from './components/StarshipList'
 function App() {
   return (
     <div className="App">
-     {/* {starshipElements} */}
+     {/* <div className="cards">{starshipElements}</div> */}
      <h1>STAR WARS STARSHIPS</h1>
      <StarshipList />
      {/* <StarshipListItem /> */}

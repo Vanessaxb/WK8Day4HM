@@ -21,12 +21,21 @@
 
 .cards { 
   display: grid;
-  grid-template-columns: repeat(4, 180px); /* 4 columns with equal width */
+  grid-template-columns: repeat(4, 200px); /* 4 columns with equal width */
   grid-template-rows: repeat(2, 100px);
   gap: 20px;
   justify-content: center;
-
 }
+
+.starships h3,
+.starships h4 {
+  line-height: 0; /* Adjust the value as needed (e.g., 1.1, 1, etc.) */
+}
+
+h3 {
+  color: yellow;
+}
+
 
 .App-logo {
   height: 40vmin;
